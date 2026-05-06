@@ -1,4 +1,7 @@
+streamlit
+pandas
 requests
-python-dotenv
-playwright
 beautifulsoup4
+google-genai
+python-dotenv
+urllib3
