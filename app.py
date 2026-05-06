@@ -635,7 +635,7 @@ if not result_df.empty:
             st.session_state.usage_summary = usage_summary
 
             st.success(f"LLM 필터링 완료: {len(filtered_df)}개 남음")
-            st.json(usage_summary)
+            # st.json(usage_summary)
 
 filtered_df = st.session_state.filtered_df
 
@@ -650,7 +650,7 @@ if not filtered_df.empty:
     )
 
     sorted_filtered_df = sort_df(filtered_df, sort_option_2)
-    display_product_table(sorted_filtered_df)
+    display_product_table_with_image(sorted_filtered_df)
 
     csv = sorted_filtered_df.to_csv(index=False, encoding="utf-8-sig")
     st.download_button(
