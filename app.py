@@ -15,8 +15,8 @@ from google import genai
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 load_dotenv()
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-KAKAO_REST_API_KEY = os.getenv("KAKAO_REST_API_KEY")
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+KAKAO_REST_API_KEY = st.secrets["KAKAO_REST_API_KEY"]
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
